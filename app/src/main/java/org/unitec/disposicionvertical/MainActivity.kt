@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Vamos a invocar el servicio del vibrador
+        //Vamos a invocar el servicio del vibradordddd
      var vibrador=    getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         vibrador.vibrate(3000)
 
