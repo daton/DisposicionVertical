@@ -18,6 +18,7 @@
             android:text="Ingresar"
             android:padding="30dp"
             android:textSize="24dp"
+            android:id="@+id/navegar"
             android:textColor="@color/blanquito"
             android:layout_margin="30dp"
             android:background="@color/colorAccent"
