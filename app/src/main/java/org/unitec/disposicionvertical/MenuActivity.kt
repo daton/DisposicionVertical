@@ -1,6 +1,7 @@
 package org.unitec.disposicionvertical
 
 import android.os.Bundle
+import android.support.constraint.ConstraintLayout
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
@@ -8,6 +9,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import kotlinx.android.synthetic.main.activity_menu.*
 import kotlinx.android.synthetic.main.app_bar_menu.*
 
@@ -17,6 +19,18 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
         setSupportActionBar(toolbar)
+
+           //oculta todo y solo muestra la de inicio
+       var perfil=    findViewById(R.id.layout_perfil) as ConstraintLayout
+        perfil.visibility=View.INVISIBLE
+
+        var servicios=    findViewById(R.id.layout_servicios) as ConstraintLayout
+        servicios.visibility=View.INVISIBLE
+
+        var contacto=    findViewById(R.id.layout_contacto) as ConstraintLayout
+        contacto.visibility=View.INVISIBLE
+
+
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -59,24 +73,19 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_camera -> {
+            R.id.nav_inicio -> {
                 // Handle the camera action
             }
-            R.id.nav_gallery -> {
+            R.id.nav_perfil -> {
 
             }
-            R.id.nav_slideshow -> {
+            R.id.nav_servicios -> {
 
             }
-            R.id.nav_manage -> {
+            R.id.nav_contacto -> {
 
             }
-            R.id.nav_share -> {
 
-            }
-            R.id.nav_send -> {
-
-            }
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
