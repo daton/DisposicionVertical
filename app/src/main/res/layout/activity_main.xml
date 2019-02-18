@@ -36,4 +36,10 @@
 
     </android.support.design.widget.TextInputLayout>
 
+    <Button android:layout_width="match_parent"
+            android:id="@+id/naavegar"
+            android:background="@color/colorPrimaryDark"
+            android:text="Ingresar"
+            android:layout_height="wrap_content"/>
+
 </LinearLayout>
