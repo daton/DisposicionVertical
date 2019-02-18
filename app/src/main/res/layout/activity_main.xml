@@ -14,14 +14,26 @@
              android:gravity="center"
              android:layout_height="wrap_content"/>
 
-    <Button android:layout_width="match_parent"
-            android:text="Ingresar"
-            android:padding="30dp"
-            android:textSize="24dp"
-            android:id="@+id/navegar"
-            android:textColor="@color/blanquito"
-            android:layout_margin="30dp"
-            android:background="@color/colorAccent"
-            android:layout_height="wrap_content"/>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText android:layout_width="match_parent"
+                  android:hint="Tu correo"
+                  android:id="@+id/txtLogin"
+                  android:layout_height="wrap_content"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText android:layout_width="match_parent"
+                  android:hint="Tu password"
+                  android:id="@+id/txtPassword"
+                  android:layout_height="wrap_content"/>
+
+    </android.support.design.widget.TextInputLayout>
 
 </LinearLayout>

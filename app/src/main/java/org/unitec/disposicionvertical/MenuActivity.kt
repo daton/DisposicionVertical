@@ -21,14 +21,11 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(toolbar)
 
            //oculta todo y solo muestra la de inicio
-       var perfil=    findViewById(R.id.layout_perfil) as ConstraintLayout
-        perfil.visibility=View.INVISIBLE
+         ocultarTodo()
 
-        var servicios=    findViewById(R.id.layout_servicios) as ConstraintLayout
-        servicios.visibility=View.INVISIBLE
+        var inicio=findViewById(R.id.layout_inicio) as ConstraintLayout
+        inicio.visibility=View.VISIBLE
 
-        var contacto=    findViewById(R.id.layout_contacto) as ConstraintLayout
-        contacto.visibility=View.INVISIBLE
 
 
 
@@ -75,20 +72,51 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             R.id.nav_inicio -> {
                 // Handle the camera action
+                //oculta todo y solo muestra la de inicio
+                ocultarTodo()
+
+                var inicio=findViewById(R.id.layout_inicio) as ConstraintLayout
+                inicio.visibility=View.VISIBLE
             }
             R.id.nav_perfil -> {
+                //oculta todo y solo muestra la de inicio
+                ocultarTodo()
 
+                var inicio=findViewById(R.id.layout_perfil) as ConstraintLayout
+                inicio.visibility=View.VISIBLE
             }
             R.id.nav_servicios -> {
+                //oculta todo y solo muestra la de inicio
+                ocultarTodo()
 
+                var inicio=findViewById(R.id.layout_servicios) as ConstraintLayout
+                inicio.visibility=View.VISIBLE
             }
             R.id.nav_contacto -> {
+                //oculta todo y solo muestra la de inicio
+                ocultarTodo()
 
+                var inicio=findViewById(R.id.layout_contacto) as ConstraintLayout
+                inicio.visibility=View.VISIBLE
             }
 
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    fun ocultarTodo(){
+        var inicio=findViewById(R.id.layout_inicio) as ConstraintLayout
+        inicio.visibility=View.INVISIBLE
+
+        var perfil=    findViewById(R.id.layout_perfil) as ConstraintLayout
+        perfil.visibility=View.INVISIBLE
+
+        var servicios=    findViewById(R.id.layout_servicios) as ConstraintLayout
+        servicios.visibility=View.INVISIBLE
+
+        var contacto=    findViewById(R.id.layout_contacto) as ConstraintLayout
+        contacto.visibility=View.INVISIBLE
     }
 }
