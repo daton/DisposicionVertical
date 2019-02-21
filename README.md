@@ -38,8 +38,9 @@ Después vamos a implementar los métodos onNavigationFaildeg y on NavigationSuc
 
 Despues declaramos un atributo del tipo relacionado al campo que deseamos validar, aunque no necesariamente con el mismo nombre, y lo anotamos como por ejemplo:
 ```
-    @Email
+    @Email(message = "correo inválido")
     private var login:EditText?=null
+    
     @Password(min = 6, scheme = Password.Scheme.ALPHA_NUMERIC, message = "passwrdo no valido")
     private var password: EditText? = null  
     
