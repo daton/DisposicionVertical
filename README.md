@@ -22,6 +22,13 @@ Después vamos a implementar los métodos onNavigationFaildeg y on NavigationSuc
 ```
     override fun onValidationFailed(errors: MutableList<ValidationError>?) {
        //Aqui van las acciones  a tomar en caso de validaciones erroneas 
+       var mensa="men"
+
+        for (error in errors!!) {
+            val view = error.view
+
+            mensa=error.getCollatedErrorMessage(applicationContext)
+        }
     }
 
     override fun onValidationSucceeded() {
@@ -31,7 +38,10 @@ Después vamos a implementar los métodos onNavigationFaildeg y on NavigationSuc
 
 Despues declaramos un atributo del tipo relacionado al campo que deseamos validar, aunque no necesariamente con el mismo nombre, y lo anotamos como por ejemplo:
 ```
-
+  @Email
+    private var login:EditText?=null
+    
+    
 ```
 
 Iniciamos inmediatamente abajo del setContentView  los validadores y el campos ue vamos a validar lo asignamos a la vista correspondiente
