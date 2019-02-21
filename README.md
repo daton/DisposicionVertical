@@ -10,3 +10,10 @@
 ```
     implementation 'com.mobsandgeeks:android-saripaar:2.0.2'
 ```
+
+## Manejo de validaciones en Android
+
+Primero implementamos la interface  siguiente:
+```
+Validator.ValidationListener
+```
