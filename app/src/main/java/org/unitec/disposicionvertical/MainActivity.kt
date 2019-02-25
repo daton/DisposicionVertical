@@ -14,6 +14,7 @@ import com.mobsandgeeks.saripaar.annotation.Password
 
 
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.ObjectOutputStream
 
 
 class MainActivity : AppCompatActivity(), Validator.ValidationListener {
@@ -49,6 +50,11 @@ private var password: EditText? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+
+
+
 
         var validator = Validator(this);
         validator.setValidationListener(this);
